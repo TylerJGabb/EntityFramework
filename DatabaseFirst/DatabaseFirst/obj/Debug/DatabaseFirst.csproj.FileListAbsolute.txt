@@ -1,0 +1,10 @@
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\bin\Debug\DatabaseFirst.exe
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\bin\Debug\DatabaseFirst.pdb
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\bin\Debug\EntityFramework.dll
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\bin\Debug\EntityFramework.xml
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.csprojResolveAssemblyReference.cache
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.exe
+C:\Users\Tyler\Documents\Sandbox\EntityFramework\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.pdb

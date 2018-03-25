@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DatabaseFirstModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="QALabRequirements">
+          <Key>
+            <PropertyRef Name="Record_Number" />
+          </Key>
+          <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QALabTestMap">
+          <Key>
+            <PropertyRef Name="Record_Number" />
+          </Key>
+          <Property Name="QALabTest_Number" Type="int" Nullable="false" />
+          <Property Name="QALabRequirement_Number" Type="int" Nullable="false" />
+          <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QALabTests">
+          <Key>
+            <PropertyRef Name="Record_Number" />
+          </Key>
+          <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__QALabTest__QALab__267ABA7A">
+          <End Role="QALabTests" Type="Self.QALabTests" Multiplicity="1" />
+          <End Role="QALabTestMap" Type="Self.QALabTestMap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QALabTests">
+              <PropertyRef Name="Record_Number" />
+            </Principal>
+            <Dependent Role="QALabTestMap">
+              <PropertyRef Name="QALabTest_Number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QALabTest__QALab__276EDEB3">
+          <End Role="QALabRequirements" Type="Self.QALabRequirements" Multiplicity="1" />
+          <End Role="QALabTestMap" Type="Self.QALabTestMap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QALabRequirements">
+              <PropertyRef Name="Record_Number" />
+            </Principal>
+            <Dependent Role="QALabTestMap">
+              <PropertyRef Name="QALabRequirement_Number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseFirstModelStoreContainer">
+          <EntitySet Name="QALabRequirements" EntityType="Self.QALabRequirements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QALabTestMap" EntityType="Self.QALabTestMap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QALabTests" EntityType="Self.QALabTests" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__QALabTest__QALab__267ABA7A" Association="Self.FK__QALabTest__QALab__267ABA7A">
+            <End Role="QALabTests" EntitySet="QALabTests" />
+            <End Role="QALabTestMap" EntitySet="QALabTestMap" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QALabTest__QALab__276EDEB3" Association="Self.FK__QALabTest__QALab__276EDEB3">
+            <End Role="QALabRequirements" EntitySet="QALabRequirements" />
+            <End Role="QALabTestMap" EntitySet="QALabTestMap" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DatabaseFirstModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="QALabRequirement">
+          <Key>
+            <PropertyRef Name="Record_Number" />
+          </Key>
+          <Property Name="Record_Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="QALabTestMaps" Relationship="Self.FK__QALabTest__QALab__276EDEB3" FromRole="QALabRequirements" ToRole="QALabTestMap" />
+        </EntityType>
+        <EntityType Name="QALabTestMap">
+          <Key>
+            <PropertyRef Name="Record_Number" />
+          </Key>
+          <Property Name="QALabTest_Number" Type="Int32" Nullable="false" />
+          <Property Name="QALabRequirement_Number" Type="Int32" Nullable="false" />
+          <Property Name="Record_Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="QALabRequirement" Relationship="Self.FK__QALabTest__QALab__276EDEB3" FromRole="QALabTestMap" ToRole="QALabRequirements" />
+          <NavigationProperty Name="QALabTest" Relationship="Self.FK__QALabTest__QALab__267ABA7A" FromRole="QALabTestMap" ToRole="QALabTests" />
+        </EntityType>
+        <EntityType Name="QALabTest">
+          <Key>
+            <PropertyRef Name="Record_Number" />
+          </Key>
+          <Property Name="Record_Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="QALabTestMaps" Relationship="Self.FK__QALabTest__QALab__267ABA7A" FromRole="QALabTests" ToRole="QALabTestMap" />
+        </EntityType>
+        <Association Name="FK__QALabTest__QALab__276EDEB3">
+          <End Role="QALabRequirements" Type="Self.QALabRequirement" Multiplicity="1" />
+          <End Role="QALabTestMap" Type="Self.QALabTestMap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QALabRequirements">
+              <PropertyRef Name="Record_Number" />
+            </Principal>
+            <Dependent Role="QALabTestMap">
+              <PropertyRef Name="QALabRequirement_Number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__QALabTest__QALab__267ABA7A">
+          <End Role="QALabTests" Type="Self.QALabTest" Multiplicity="1" />
+          <End Role="QALabTestMap" Type="Self.QALabTestMap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QALabTests">
+              <PropertyRef Name="Record_Number" />
+            </Principal>
+            <Dependent Role="QALabTestMap">
+              <PropertyRef Name="QALabTest_Number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseFirstEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="QALabRequirements" EntityType="Self.QALabRequirement" />
+          <EntitySet Name="QALabTestMaps" EntityType="Self.QALabTestMap" />
+          <EntitySet Name="QALabTests" EntityType="Self.QALabTest" />
+          <AssociationSet Name="FK__QALabTest__QALab__276EDEB3" Association="Self.FK__QALabTest__QALab__276EDEB3">
+            <End Role="QALabRequirements" EntitySet="QALabRequirements" />
+            <End Role="QALabTestMap" EntitySet="QALabTestMaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK__QALabTest__QALab__267ABA7A" Association="Self.FK__QALabTest__QALab__267ABA7A">
+            <End Role="QALabTests" EntitySet="QALabTests" />
+            <End Role="QALabTestMap" EntitySet="QALabTestMaps" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DatabaseFirstModelStoreContainer" CdmEntityContainer="DatabaseFirstEntities">
+          <EntitySetMapping Name="QALabRequirements">
+            <EntityTypeMapping TypeName="DatabaseFirstModel.QALabRequirement">
+              <MappingFragment StoreEntitySet="QALabRequirements">
+                <ScalarProperty Name="Record_Number" ColumnName="Record_Number" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QALabTestMaps">
+            <EntityTypeMapping TypeName="DatabaseFirstModel.QALabTestMap">
+              <MappingFragment StoreEntitySet="QALabTestMap">
+                <ScalarProperty Name="QALabTest_Number" ColumnName="QALabTest_Number" />
+                <ScalarProperty Name="QALabRequirement_Number" ColumnName="QALabRequirement_Number" />
+                <ScalarProperty Name="Record_Number" ColumnName="Record_Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QALabTests">
+            <EntityTypeMapping TypeName="DatabaseFirstModel.QALabTest">
+              <MappingFragment StoreEntitySet="QALabTests">
+                <ScalarProperty Name="Record_Number" ColumnName="Record_Number" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

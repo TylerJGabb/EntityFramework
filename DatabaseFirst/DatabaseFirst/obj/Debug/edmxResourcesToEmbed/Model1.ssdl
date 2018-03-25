@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseFirstModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="QALabRequirements">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QALabTestMap">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="QALabTest_Number" Type="int" Nullable="false" />
+    <Property Name="QALabRequirement_Number" Type="int" Nullable="false" />
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QALabTests">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__QALabTest__QALab__267ABA7A">
+    <End Role="QALabTests" Type="Self.QALabTests" Multiplicity="1" />
+    <End Role="QALabTestMap" Type="Self.QALabTestMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QALabTests">
+        <PropertyRef Name="Record_Number" />
+      </Principal>
+      <Dependent Role="QALabTestMap">
+        <PropertyRef Name="QALabTest_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QALabTest__QALab__276EDEB3">
+    <End Role="QALabRequirements" Type="Self.QALabRequirements" Multiplicity="1" />
+    <End Role="QALabTestMap" Type="Self.QALabTestMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QALabRequirements">
+        <PropertyRef Name="Record_Number" />
+      </Principal>
+      <Dependent Role="QALabTestMap">
+        <PropertyRef Name="QALabRequirement_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseFirstModelStoreContainer">
+    <EntitySet Name="QALabRequirements" EntityType="Self.QALabRequirements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QALabTestMap" EntityType="Self.QALabTestMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QALabTests" EntityType="Self.QALabTests" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__QALabTest__QALab__267ABA7A" Association="Self.FK__QALabTest__QALab__267ABA7A">
+      <End Role="QALabTests" EntitySet="QALabTests" />
+      <End Role="QALabTestMap" EntitySet="QALabTestMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QALabTest__QALab__276EDEB3" Association="Self.FK__QALabTest__QALab__276EDEB3">
+      <End Role="QALabRequirements" EntitySet="QALabRequirements" />
+      <End Role="QALabTestMap" EntitySet="QALabTestMap" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
