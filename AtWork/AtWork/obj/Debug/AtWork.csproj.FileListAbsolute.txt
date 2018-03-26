@@ -9,3 +9,5 @@ C:\Users\Tyler\Documents\Clones\EntityFramework\AtWork\AtWork\obj\Debug\AtWork.c
 C:\Users\Tyler\Documents\Clones\EntityFramework\AtWork\AtWork\obj\Debug\AtWork.csproj.CoreCompileInputs.cache
 C:\Users\Tyler\Documents\Clones\EntityFramework\AtWork\AtWork\obj\Debug\AtWork.exe
 C:\Users\Tyler\Documents\Clones\EntityFramework\AtWork\AtWork\obj\Debug\AtWork.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\AtWork\AtWork\obj\Debug\AtWork.MyForm.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\AtWork\AtWork\obj\Debug\AtWork.csproj.GenerateResource.Cache

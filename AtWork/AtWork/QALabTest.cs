@@ -30,7 +30,7 @@ namespace AtWork
 
         public override string ToString()
         {
-            return $"{Record_Number} -- {Description}";
+            return $"{{{Record_Number}}}:{Description}-{Address.Company}";
         }
     }
 }
