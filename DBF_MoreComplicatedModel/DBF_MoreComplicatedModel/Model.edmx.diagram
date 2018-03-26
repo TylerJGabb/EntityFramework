@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4596e4440129467bafbbb25f7979434c" Name="Diagram1">
+        <EntityTypeShape EntityType="RandomModel.Customer" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="RandomModel.Requirement" Width="1.5" PointX="7.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RandomModel.TestMap" Width="1.5" PointX="5.25" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RandomModel.Test" Width="1.5" PointX="4.25" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="RandomModel.FK__Tests__Customer___49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="RandomModel.FK__TestMap__Require__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="RandomModel.FK__TestMap__Test_Nu__45F365D3" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

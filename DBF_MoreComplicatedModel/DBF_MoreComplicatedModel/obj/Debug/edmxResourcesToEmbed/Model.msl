@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RandomModelStoreContainer" CdmEntityContainer="RandomEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="RandomModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Record_Number" ColumnName="Record_Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requirements">
+      <EntityTypeMapping TypeName="RandomModel.Requirement">
+        <MappingFragment StoreEntitySet="Requirements">
+          <ScalarProperty Name="Record_Number" ColumnName="Record_Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TestMethod" ColumnName="TestMethod" />
+          <ScalarProperty Name="IsNumeric" ColumnName="IsNumeric" />
+          <ScalarProperty Name="MinimumInternal" ColumnName="MinimumInternal" />
+          <ScalarProperty Name="MaximumInternal" ColumnName="MaximumInternal" />
+          <ScalarProperty Name="MinimumExternal" ColumnName="MinimumExternal" />
+          <ScalarProperty Name="MaximumExternal" ColumnName="MaximumExternal" />
+          <ScalarProperty Name="IsPassFail" ColumnName="IsPassFail" />
+          <ScalarProperty Name="IsString" ColumnName="IsString" />
+          <ScalarProperty Name="IsPressTest" ColumnName="IsPressTest" />
+          <ScalarProperty Name="IsLamTest" ColumnName="IsLamTest" />
+          <ScalarProperty Name="IsSlitterTest" ColumnName="IsSlitterTest" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="QuarantineIfFail" ColumnName="QuarantineIfFail" />
+          <ScalarProperty Name="SequenceNumber" ColumnName="SequenceNumber" />
+          <ScalarProperty Name="IncludeCOA" ColumnName="IncludeCOA" />
+          <ScalarProperty Name="MasterItemID" ColumnName="MasterItemID" />
+          <ScalarProperty Name="Selector" ColumnName="Selector" />
+          <ScalarProperty Name="COCDisplayMethod" ColumnName="COCDisplayMethod" />
+          <ScalarProperty Name="COCDisplaySpec" ColumnName="COCDisplaySpec" />
+          <ScalarProperty Name="COCDisplayUnitOfMeasure" ColumnName="COCDisplayUnitOfMeasure" />
+          <ScalarProperty Name="COCDisplayVariance" ColumnName="COCDisplayVariance" />
+          <ScalarProperty Name="TextIfPass" ColumnName="TextIfPass" />
+          <ScalarProperty Name="TextIfFail" ColumnName="TextIfFail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestMaps">
+      <EntityTypeMapping TypeName="RandomModel.TestMap">
+        <MappingFragment StoreEntitySet="TestMap">
+          <ScalarProperty Name="Record_Number" ColumnName="Record_Number" />
+          <ScalarProperty Name="Test_Number" ColumnName="Test_Number" />
+          <ScalarProperty Name="Requirement_Number" ColumnName="Requirement_Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tests">
+      <EntityTypeMapping TypeName="RandomModel.Test">
+        <MappingFragment StoreEntitySet="Tests">
+          <ScalarProperty Name="Record_Number" ColumnName="Record_Number" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Customer_Record_Number" ColumnName="Customer_Record_Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

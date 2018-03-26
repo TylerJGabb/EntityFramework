@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="polyprintModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="zip" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="Contact" Type="varchar" MaxLength="50" />
+    <Property Name="Job_Title" Type="varchar" MaxLength="50" />
+    <Property Name="Type_Code" Type="int" />
+    <Property Name="Class" Type="varchar" MaxLength="1" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="EMail" Type="varchar" MaxLength="150" />
+    <Property Name="URL" Type="varchar" MaxLength="80" />
+    <Property Name="Credit" Type="bit" />
+    <Property Name="Max_Credit" Type="money" />
+    <Property Name="Default_Freight" Type="money" />
+    <Property Name="Max_PO" Type="money" />
+    <Property Name="Freight_Code" Type="int" />
+    <Property Name="Terms_Code" Type="int" />
+    <Property Name="Quote_Alert" Type="bit" Nullable="false" />
+    <Property Name="PO_Alert" Type="bit" />
+    <Property Name="PO_Alert_Text" Type="text" />
+    <Property Name="Account_Number" Type="varchar" MaxLength="25" />
+    <Property Name="Quote_Alert_Text" Type="text" />
+    <Property Name="Price_Alert_Text" Type="text" />
+    <Property Name="General_Text" Type="text" />
+    <Property Name="PO_Text" Type="text" />
+    <Property Name="WO_Hold" Type="bit" />
+    <Property Name="WO_Hold_Text" Type="text" />
+    <Property Name="Summary" Type="varchar" MaxLength="50" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Last_Price_Increase" Type="datetime" />
+    <Property Name="Last_modified" Type="datetime" />
+    <Property Name="Modified_By" Type="int" />
+    <Property Name="Send_Calendar" Type="bit" Nullable="false" />
+    <Property Name="Mold_Code" Type="int" />
+    <Property Name="Imported" Type="bit" />
+    <Property Name="Import_Class" Type="varchar" MaxLength="10" />
+    <Property Name="Show_PP_Logo_on_Labels" Type="bit" Nullable="false" />
+    <Property Name="Default_Quote_Contact" Type="int" />
+    <Property Name="Default_Order_Contact" Type="int" />
+    <Property Name="Default_Billing_Contact" Type="int" />
+    <Property Name="Default_Problem_Contact" Type="int" />
+    <Property Name="Required_PO_Attachement" Type="varchar" MaxLength="255" />
+    <Property Name="Include_Roll_Price" Type="bit" Nullable="false" />
+    <Property Name="Include_MSI_Price" Type="bit" Nullable="false" />
+    <Property Name="Salesperson_Code" Type="int" />
+    <Property Name="Broker_Code" Type="int" />
+    <Property Name="Include_Per_Pound_Price" Type="bit" Nullable="false" />
+    <Property Name="Default_Overrun_Surface" Type="int" />
+    <Property Name="Default_Overrun_Reverse" Type="int" />
+    <Property Name="Default_Overrun_Seasonal" Type="int" />
+    <Property Name="CSR_Code" Type="int" />
+    <Property Name="Grace_Period_Days" Type="int" />
+    <Property Name="Grace_Limit" Type="int" />
+    <Property Name="Pre_Approve_Purchases_By" Type="int" />
+    <Property Name="Must_Weigh_Each_Printed_Roll" Type="bit" />
+    <Property Name="Customer_Required_Printed_Packing_List" Type="bit" />
+    <Property Name="Invoice_Customer_When_BOL_Created" Type="bit" />
+    <Property Name="Ship_To" Type="varchar" MaxLength="50" />
+    <Property Name="Ship_Address_1" Type="varchar" MaxLength="50" />
+    <Property Name="Ship_Address_2" Type="varchar" MaxLength="50" />
+    <Property Name="Ship_City" Type="varchar" MaxLength="50" />
+    <Property Name="Ship_State" Type="varchar" MaxLength="10" />
+    <Property Name="Ship_Zip" Type="varchar" MaxLength="11" />
+    <Property Name="Vendor_Supplies_Barcodes" Type="bit" />
+    <Property Name="Bill_To_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Default_Roll_Specifier_Code" Type="char" MaxLength="1" />
+    <Property Name="Default_Roll_Size" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Customer_Requires_Certificate_of_Analysis" Type="bit" />
+    <Property Name="Default_PO_Note" Type="varchar" MaxLength="250" />
+    <Property Name="Show_On_Order_Planning" Type="bit" />
+    <Property Name="Customer_Requires_New_Item_Labels" Type="bit" Nullable="false" />
+    <Property Name="Show_Alert_On_BOL" Type="bit" />
+    <Property Name="Alert_Text_For_New_BOL" Type="varchar" MaxLength="2000" />
+    <Property Name="Print_Customer_Labels_When_Slitting" Type="bit" />
+    <Property Name="Accepts_Docusign" Type="bit" />
+    <Property Name="Include_Impression_Price" Type="bit" Nullable="false" />
+    <Property Name="Include_1kImpression_Price" Type="bit" Nullable="false" />
+    <Property Name="PendingApproval" Type="bit" Nullable="false" />
+    <Property Name="ApprovedBy" Type="int" />
+    <Property Name="ApprovedDate" Type="datetime2" Precision="7" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Receipt_For_Invoice_Mails" Type="bit" />
+    <Property Name="Send_Calendar_Include_In_Current_Mailing" Type="bit" />
+    <Property Name="Require_PP_Job_Number_On_Purchase_Orders" Type="bit" />
+    <Property Name="Notification_EMail" Type="varchar" MaxLength="150" />
+    <Property Name="Art_Invoice_Terms_code" Type="int" />
+    <Property Name="CSR_Backup_Code" Type="int" />
+    <Property Name="Send_Correct_Action_Reports" Type="bit" />
+    <Property Name="Allow_Schedule_Even_If_Over_Credit_Limit" Type="bit" />
+    <Property Name="Allow_Schedule_Even_If_Have_Pending_Art_Invoices" Type="bit" />
+    <Property Name="Do_Not_Ship_Hold" Type="bit" />
+    <Property Name="Customer_Requires_Certificate_of_Compliance" Type="bit" />
+    <Property Name="Number_Of_Pallet_Labels_On_Slitter" Type="int" />
+    <Property Name="Ship_Collect" Type="bit" />
+    <Property Name="Supplier_Type_Number" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'polyprint.dbo.Company' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Company">
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address1" Type="varchar" MaxLength="50" />
+          <Property Name="Address2" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="2" />
+          <Property Name="Zip" Type="varchar" MaxLength="10" />
+          <Property Name="Phone" Type="varchar" MaxLength="15" />
+          <Property Name="Fax" Type="varchar" MaxLength="15" />
+          <Property Name="URL" Type="varchar" MaxLength="50" />
+          <Property Name="EMail" Type="varchar" MaxLength="50" />
+          <Property Name="Motto" Type="varchar" MaxLength="255" />
+          <Property Name="Logo" Type="image" />
+          <Property Name="Master_Password" Type="varchar" MaxLength="10" />
+          <Property Name="Supervisor_Password" Type="varchar" MaxLength="10" />
+          <Property Name="Last_modified" Type="datetime" />
+          <Property Name="Modified_By" Type="int" />
+          <Property Name="Non_Film_Purchase_Documents" Type="varchar" MaxLength="80" />
+          <Property Name="Film_Documents" Type="varchar" MaxLength="80" />
+          <Property Name="Cell_Phone" Type="varchar" MaxLength="15" />
+          <Property Name="Ship_Address1" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_City1" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_State1" Type="varchar" MaxLength="2" />
+          <Property Name="Ship_Zip1" Type="varchar" MaxLength="10" />
+          <Property Name="Ship_Address2" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_City2" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_State2" Type="varchar" MaxLength="2" />
+          <Property Name="Ship_Zip2" Type="varchar" MaxLength="10" />
+          <Property Name="watermark" Type="image" />
+          <Property Name="Length_For_No_Value" Type="int" />
+          <Property Name="Minimum_Job_Work_Hours" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Overtime_Buffer" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Adhesive_Weight_Range_Low" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="Adhesive_Weight_Range_High" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="Default_Coverage_Per_Color" Type="int" />
+          <Property Name="SMTP_Server" Type="varchar" MaxLength="50" />
+          <Property Name="Adhesive_Weight_Min_For_3Time_Lockout" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="Film_PO_BCC_Address" Type="varchar" MaxLength="50" />
+          <Property Name="Order_Aproval_BCC_Address" Type="varchar" MaxLength="50" />
+          <Property Name="Quote_BCC_Address" Type="varchar" MaxLength="50" />
+          <Property Name="PO_BCC_Address" Type="varchar" MaxLength="50" />
+          <Property Name="Invoice_BCC_Address" Type="varchar" MaxLength="50" />
+          <Property Name="Pounds_For_No_Value" Type="int" />
+          <Property Name="Shipping_Markup" Type="decimal" Precision="18" Scale="5" />
+          <Property Name="Shipping_Surcharge" Type="money" />
+          <Property Name="GS1_Manufacturer_Code" Type="varchar" MaxLength="8" />
+          <Property Name="SMPT_Username" Type="varchar" MaxLength="50" />
+          <Property Name="SMPT_Password" Type="varchar" MaxLength="50" />
+          <Property Name="FileSizeForEmailAttachment" Type="int" />
+          <Property Name="InkBlender_Server_Name" Type="varchar" MaxLength="50" />
+          <Property Name="InkBlender_User_Name" Type="varchar" MaxLength="50" />
+          <Property Name="InkBlender_Password" Type="varchar" MaxLength="50" />
+          <Property Name="InkBlender_DataBase" Type="varchar" MaxLength="50" />
+          <Property Name="SMTP_Port" Type="int" />
+          <Property Name="Width_For_No_Value" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="PortalUrl" Type="varchar" MaxLength="50" />
+          <Property Name="FedExAccountNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Primary_Art_Vendor_Number" Type="int" />
+          <Property Name="Secondary_Art_Vendor_Number" Type="int" />
+          <Property Name="Artwork_Master_Folder" Type="varchar" MaxLength="256" />
+          <Property Name="UpsAccountNumber" Type="varchar" MaxLength="50" />
+          <Property Name="SchedulingServiceWSDLLocation" Type="nvarchar" MaxLength="256" />
+          <Property Name="Customer_Plate_Charge_Per_Square_Inch" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Customer_GMG_Charge_After_First" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Dieline_Charge_For_Rollstock" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Dieline_Charge_For_Pouch" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Customer_GMG_Charge" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Customer_Art_Quote_Base_Charge" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Customer_Art_Quote_Default_Markup_Percent" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Customer_Art_Quote_Minimum_Markup_Percent" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Customer_Art_Quote_Charge_Per_Common_Color" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ColorCert_CCJ_Filepath" Type="varchar" MaxLength="200" />
+          <Property Name="CAPA_Filepath" Type="varchar" MaxLength="200" />
+          <Property Name="ColorCert_CCJ_InProgress_Filepath" Type="varchar" MaxLength="200" />
+          <Property Name="ColorCert_CCJ_Completed_Filepath" Type="varchar" MaxLength="200" />
+          <Property Name="Gmail_No_Reply_Email_Account_Password" Type="nvarchar" MaxLength="20" />
+          <Property Name="ColorCert_CCJ_ReadyToUpload_Filepath" Type="varchar" MaxLength="200" />
+        </EntityType>-->
+  <EntityType Name="QALabRequirements">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="TestMethod" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="Is_Numeric" Type="bit" Nullable="false" />
+    <Property Name="MinimumInternal" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="MaximumInternal" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="MinimumExternal" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="MaximumExternal" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="Is_PassFail" Type="bit" Nullable="false" />
+    <Property Name="Is_String" Type="bit" Nullable="false" />
+    <Property Name="Is_Press_Test" Type="bit" Nullable="false" />
+    <Property Name="Is_Laminator_Test" Type="bit" Nullable="false" />
+    <Property Name="Is_Slitter_Test" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Quarantine_If_Fail" Type="bit" />
+    <Property Name="Sequence_Number" Type="int" />
+    <Property Name="Include_In_COA" Type="bit" />
+    <Property Name="Master_Item_Id" Type="int" />
+    <Property Name="Selector" Type="varchar" MaxLength="20" />
+    <Property Name="COC_Display_Method" Type="nvarchar" MaxLength="50" />
+    <Property Name="COC_Display_Spec" Type="nvarchar" MaxLength="50" />
+    <Property Name="COC_Display_Unit_Of_Measure" Type="nvarchar" MaxLength="50" />
+    <Property Name="COC_Display_Variance" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_If_Pass" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text_If_Fail" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QALabResultItems">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QALabSessionNumber" Type="int" Nullable="false" />
+    <Property Name="QALabRequirement_Number" Type="int" Nullable="false" />
+    <Property Name="NumericValue" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="PassFailValue" Type="bit" />
+    <Property Name="StringValue" Type="nvarchar" MaxLength="50" />
+    <Property Name="TestBy" Type="int" Nullable="false" />
+    <Property Name="TestOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QALabTestMap">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QALabTest_Number" Type="int" Nullable="false" />
+    <Property Name="QALabRequirement_Number" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QALabTests">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Customer_Record_Number" Type="int" />
+  </EntityType>
+  <Association Name="FK_QALabResultItems_QALabRequirements">
+    <End Role="QALabRequirements" Type="Self.QALabRequirements" Multiplicity="1" />
+    <End Role="QALabResultItems" Type="Self.QALabResultItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QALabRequirements">
+        <PropertyRef Name="Record_Number" />
+      </Principal>
+      <Dependent Role="QALabResultItems">
+        <PropertyRef Name="QALabRequirement_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QALabTestMap_QALabRequirements">
+    <End Role="QALabRequirements" Type="Self.QALabRequirements" Multiplicity="1" />
+    <End Role="QALabTestMap" Type="Self.QALabTestMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QALabRequirements">
+        <PropertyRef Name="Record_Number" />
+      </Principal>
+      <Dependent Role="QALabTestMap">
+        <PropertyRef Name="QALabRequirement_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QALabTestMap_QALabTests">
+    <End Role="QALabTests" Type="Self.QALabTests" Multiplicity="1" />
+    <End Role="QALabTestMap" Type="Self.QALabTestMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QALabTests">
+        <PropertyRef Name="Record_Number" />
+      </Principal>
+      <Dependent Role="QALabTestMap">
+        <PropertyRef Name="QALabTest_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QALabTests_Address">
+    <End Role="Address" Type="Self.Address" Multiplicity="0..1" />
+    <End Role="QALabTests" Type="Self.QALabTests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="Record_Number" />
+      </Principal>
+      <Dependent Role="QALabTests">
+        <PropertyRef Name="Customer_Record_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="polyprintModelStoreContainer">
+    <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QALabRequirements" EntityType="Self.QALabRequirements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QALabResultItems" EntityType="Self.QALabResultItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QALabTestMap" EntityType="Self.QALabTestMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QALabTests" EntityType="Self.QALabTests" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_QALabResultItems_QALabRequirements" Association="Self.FK_QALabResultItems_QALabRequirements">
+      <End Role="QALabRequirements" EntitySet="QALabRequirements" />
+      <End Role="QALabResultItems" EntitySet="QALabResultItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QALabTestMap_QALabRequirements" Association="Self.FK_QALabTestMap_QALabRequirements">
+      <End Role="QALabRequirements" EntitySet="QALabRequirements" />
+      <End Role="QALabTestMap" EntitySet="QALabTestMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QALabTestMap_QALabTests" Association="Self.FK_QALabTestMap_QALabTests">
+      <End Role="QALabTests" EntitySet="QALabTests" />
+      <End Role="QALabTestMap" EntitySet="QALabTestMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QALabTests_Address" Association="Self.FK_QALabTests_Address">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="QALabTests" EntitySet="QALabTests" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

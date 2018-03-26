@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9488e6ec894644399755fc7596507f51" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="polyprintModel.Address" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="polyprintModel.QALabRequirement" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="polyprintModel.QALabResultItem" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="polyprintModel.QALabTestMap" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="polyprintModel.QALabTest" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="polyprintModel.FK_QALabTests_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="polyprintModel.FK_QALabResultItems_QALabRequirements" ManuallyRouted="false" />
+        <AssociationConnector Association="polyprintModel.FK_QALabTestMap_QALabRequirements" ManuallyRouted="false" />
+        <AssociationConnector Association="polyprintModel.FK_QALabTestMap_QALabTests" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RandomModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Requirements">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TestMethod" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsNumeric" Type="bit" Nullable="false" />
+    <Property Name="MinimumInternal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaximumInternal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MinimumExternal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaximumExternal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IsPassFail" Type="bit" Nullable="false" />
+    <Property Name="IsString" Type="bit" Nullable="false" />
+    <Property Name="IsPressTest" Type="bit" Nullable="false" />
+    <Property Name="IsLamTest" Type="bit" Nullable="false" />
+    <Property Name="IsSlitterTest" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="QuarantineIfFail" Type="bit" Nullable="false" />
+    <Property Name="SequenceNumber" Type="int" Nullable="false" />
+    <Property Name="IncludeCOA" Type="bit" Nullable="false" />
+    <Property Name="MasterItemID" Type="int" Nullable="false" />
+    <Property Name="Selector" Type="nvarchar(max)" />
+    <Property Name="COCDisplayMethod" Type="nvarchar(max)" />
+    <Property Name="COCDisplaySpec" Type="nvarchar(max)" />
+    <Property Name="COCDisplayUnitOfMeasure" Type="nvarchar(max)" />
+    <Property Name="COCDisplayVariance" Type="nvarchar(max)" />
+    <Property Name="TextIfPass" Type="nvarchar(max)" />
+    <Property Name="TextIfFail" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TestMap">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Test_Number" Type="int" Nullable="false" />
+    <Property Name="Requirement_Number" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tests">
+    <Key>
+      <PropertyRef Name="Record_Number" />
+    </Key>
+    <Property Name="Record_Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Customer_Record_Number" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__TestMap__Require__46E78A0C">
+    <End Role="Requirements" Type="Self.Requirements" Multiplicity="1" />
+    <End Role="TestMap" Type="Self.TestMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requirements">
+        <PropertyRef Name="Record_Number" />
+      </Principal>
+      <Dependent Role="TestMap">
+        <PropertyRef Name="Requirement_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TestMap__Test_Nu__45F365D3">
+    <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+    <End Role="TestMap" Type="Self.TestMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tests">
+        <PropertyRef Name="Record_Number" />
+      </Principal>
+      <Dependent Role="TestMap">
+        <PropertyRef Name="Test_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tests__Customer___49C3F6B7">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Tests" Type="Self.Tests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Record_Number" />
+      </Principal>
+      <Dependent Role="Tests">
+        <PropertyRef Name="Customer_Record_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RandomModelStoreContainer">
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Requirements" EntityType="Self.Requirements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestMap" EntityType="Self.TestMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tests" EntityType="Self.Tests" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TestMap__Require__46E78A0C" Association="Self.FK__TestMap__Require__46E78A0C">
+      <End Role="Requirements" EntitySet="Requirements" />
+      <End Role="TestMap" EntitySet="TestMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TestMap__Test_Nu__45F365D3" Association="Self.FK__TestMap__Test_Nu__45F365D3">
+      <End Role="Tests" EntitySet="Tests" />
+      <End Role="TestMap" EntitySet="TestMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tests__Customer___49C3F6B7" Association="Self.FK__Tests__Customer___49C3F6B7">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Tests" EntitySet="Tests" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
