@@ -20,7 +20,12 @@ namespace AtWork
             this.QALabResultItems = new HashSet<QALabResultItem>();
             this.QALabTestMaps = new HashSet<QALabTestMap>();
         }
-    
+
+        public override string ToString()
+        {
+            return $"{{{Record_Number}}} -- {Name} -- {Description}";
+        }
+
         public int Record_Number { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

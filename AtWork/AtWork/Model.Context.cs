@@ -15,11 +15,12 @@ namespace AtWork
     
     public partial class polyprintEntities : DbContext
     {
-        public polyprintEntities(string formattedConnectionString)
-            : base(formattedConnectionString)
-        {
-        }
-    
+        private static string serverName = "PP-MUSTANG";
+        private static string format = "metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string=\"{0}\"";
+        private static string connectionString = $"data source={serverName};initial catalog=polyprint;persist security info=True;user id=sa;password=MngDBsvr2008@polyprint;MultipleActiveResultSets=True;App=EntityFramework";
+
+        public polyprintEntities() : base(String.Format(format, connectionString)) { }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -30,5 +31,7 @@ namespace AtWork
         public virtual DbSet<QALabResultItem> QALabResultItems { get; set; }
         public virtual DbSet<QALabTestMap> QALabTestMaps { get; set; }
         public virtual DbSet<QALabTest> QALabTests { get; set; }
+
+        
     }
 }
