@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PlutoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PlutoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Authors">
           <Key>
             <PropertyRef Name="AuthorID" />
@@ -20,9 +20,8 @@
           <Property Name="AuthorID" Type="int" Nullable="false" />
           <Property Name="Title" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="8000" Nullable="false" />
-          <Property Name="Price" Type="smallint" Nullable="false" />
-          <Property Name="LevelString" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Level" Type="tinyint" Nullable="false" />
+          <Property Name="FullPrice" Type="smallint" Nullable="false" />
+          <Property Name="Level" Type="smallint" Nullable="false" />
         </EntityType>
         <EntityType Name="CourseSections">
           <Key>
@@ -63,6 +62,13 @@
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserProfiles">
+          <Key>
+            <PropertyRef Name="UserProfileId" />
+          </Key>
+          <Property Name="UserProfileId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK_Courses_Authors">
           <End Role="Authors" Type="Self.Authors" Multiplicity="1">
@@ -128,6 +134,7 @@
           <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tags" EntityType="Self.Tags" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserProfiles" EntityType="Self.UserProfiles" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Courses_Authors" Association="Self.FK_Courses_Authors">
             <End Role="Authors" EntitySet="Authors" />
             <End Role="Courses" EntitySet="Courses" />
@@ -145,8 +152,7 @@
             <End Role="CourseTags" EntitySet="CourseTags" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PlutoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -158,7 +164,7 @@
           <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Courses" Relationship="Self.FK_Courses_Authors" FromRole="Authors" ToRole="Courses" />
         </EntityType>
-        <EntityType Name="Cours">
+        <EntityType Name="Course">
           <Key>
             <PropertyRef Name="CourseID" />
           </Key>
@@ -166,12 +172,11 @@
           <Property Name="AuthorID" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Price" Type="Int16" Nullable="false" />
-          <Property Name="LevelString" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Level" Type="Byte" Nullable="false" />
           <NavigationProperty Name="Author" Relationship="Self.FK_Courses_Authors" FromRole="Courses" ToRole="Authors" />
           <NavigationProperty Name="CourseSections" Relationship="Self.FK_CourseSections_Courses" FromRole="Courses" ToRole="CourseSections" />
           <NavigationProperty Name="Tags" Relationship="Self.CourseTags" FromRole="Courses" ToRole="Tags" />
+          <Property Name="FullPrice" Type="Int16" Nullable="false" />
         </EntityType>
         <EntityType Name="CourseSection">
           <Key>
@@ -211,7 +216,7 @@
           <End Role="Authors" Type="Self.Author" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Courses" Type="Self.Cours" Multiplicity="*" />
+          <End Role="Courses" Type="PlutoModel.Course" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Authors">
               <PropertyRef Name="AuthorID" />
@@ -222,7 +227,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseSections_Courses">
-          <End Role="Courses" Type="Self.Cours" Multiplicity="1">
+          <End Role="Courses" Type="PlutoModel.Course" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="CourseSections" Type="Self.CourseSection" Multiplicity="*" />
@@ -236,12 +241,12 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="CourseTags">
-          <End Role="Courses" Type="Self.Cours" Multiplicity="*" />
+          <End Role="Courses" Type="PlutoModel.Course" Multiplicity="*" />
           <End Role="Tags" Type="Self.Tag" Multiplicity="*" />
         </Association>
         <EntityContainer Name="PlutoDbContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Authors" EntityType="Self.Author" />
-          <EntitySet Name="Courses" EntityType="Self.Cours" />
+          <EntitySet Name="Courses" EntityType="PlutoModel.Course" />
           <EntitySet Name="CourseSections" EntityType="Self.CourseSection" />
           <EntitySet Name="Posts" EntityType="Self.Post" />
           <EntitySet Name="Tags" EntityType="Self.Tag" />
@@ -258,7 +263,15 @@
             <End Role="Courses" EntitySet="Courses" />
             <End Role="Tags" EntitySet="Tags" />
           </AssociationSet>
+          <EntitySet Name="UserProfiles" EntityType="PlutoModel.UserProfile" />
         </EntityContainer>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserProfileId" />
+          </Key>
+          <Property Name="UserProfileId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -274,14 +287,13 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Courses">
-            <EntityTypeMapping TypeName="PlutoModel.Cours">
+            <EntityTypeMapping TypeName="PlutoModel.Course">
               <MappingFragment StoreEntitySet="Courses">
+                <ScalarProperty Name="FullPrice" ColumnName="FullPrice" />
                 <ScalarProperty Name="CourseID" ColumnName="CourseID" />
                 <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="LevelString" ColumnName="LevelString" />
                 <ScalarProperty Name="Level" ColumnName="Level" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -330,6 +342,14 @@
               <ScalarProperty Name="TagID" ColumnName="TagID" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="UserProfiles">
+            <EntityTypeMapping TypeName="PlutoModel.UserProfile">
+              <MappingFragment StoreEntitySet="UserProfiles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserProfileId" ColumnName="UserProfileId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

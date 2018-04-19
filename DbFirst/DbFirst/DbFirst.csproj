@@ -54,7 +54,7 @@
     <Compile Include="Author.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cours.cs">
+    <Compile Include="Course.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="CourseSection.cs">
@@ -84,6 +84,9 @@
       <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tblUser.cs">
+      <DependentUpon>PlutoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
