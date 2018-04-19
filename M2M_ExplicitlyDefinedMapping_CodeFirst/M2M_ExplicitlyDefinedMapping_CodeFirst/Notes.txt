@@ -1,6 +1,0 @@
-﻿It turns out that when grabbing an object from the DB through the ctx,
-when changing said item in the scope of that context and then invoking ctx.SaveChanges()
-the db makes a choice on what to do whether or not the ID of the object == 0
-
-if the object.ID == 0, then an INSERT command is executes
-if the object.ID <> 0 then an UPDATE command is executed
