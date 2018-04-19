@@ -16,9 +16,7 @@
     <Property Name="AuthorID" Type="Int32" Nullable="false" />
     <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Price" Type="Int16" Nullable="false" />
-    <Property Name="LevelString" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Level" Type="Byte" Nullable="false" />
+    <Property Name="Level" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="Author" Relationship="Self.FK_Courses_Authors" FromRole="Courses" ToRole="Authors" />
     <NavigationProperty Name="CourseSections" Relationship="Self.FK_CourseSections_Courses" FromRole="Courses" ToRole="CourseSections" />
     <NavigationProperty Name="Tags" Relationship="Self.CourseTags" FromRole="Courses" ToRole="Tags" />
@@ -109,13 +107,44 @@
       <End Role="Courses" EntitySet="Courses" />
       <End Role="Tags" EntitySet="Tags" />
     </AssociationSet>
-    <EntitySet Name="UserProfiles" EntityType="PlutoModel.UserProfile" />
+    <FunctionImport Name="DeleteCourse">
+      <Parameter Name="CourseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="funcGetAuthorCourses" IsComposable="true" ReturnType="Collection(PlutoModel.funcGetAuthorCourses_Result)">
+      <Parameter Name="AuthorID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCourses" ReturnType="Collection(PlutoModel.GetCourses_Result)" />
+    <FunctionImport Name="InsertCourse">
+      <Parameter Name="AuthorID" Mode="In" Type="Int32" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="Price" Mode="In" Type="Int16" />
+      <Parameter Name="LevelString" Mode="In" Type="String" />
+      <Parameter Name="Level" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCourse">
+      <Parameter Name="CourseID" Mode="In" Type="Int32" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="LevelString" Mode="In" Type="String" />
+      <Parameter Name="Level" Mode="In" Type="Byte" />
+    </FunctionImport>
   </EntityContainer>
-  <EntityType Name="UserProfile">
-    <Key>
-      <PropertyRef Name="UserProfileId" />
-    </Key>
-    <Property Name="UserProfileId" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-  </EntityType>
+  <ComplexType Name="funcGetAuthorCourses_Result">
+    <Property Type="Int32" Name="CourseID" Nullable="false" />
+    <Property Type="Int32" Name="AuthorID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="8000" />
+    <Property Type="Int16" Name="Price" Nullable="false" />
+    <Property Type="String" Name="LevelString" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="Level" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetCourses_Result">
+    <Property Type="Int32" Name="CourseID" Nullable="false" />
+    <Property Type="Int32" Name="AuthorID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="8000" />
+    <Property Type="Int16" Name="FullPrice" Nullable="false" />
+    <Property Type="String" Name="Level" Nullable="false" MaxLength="50" />
+  </ComplexType>
 </Schema>

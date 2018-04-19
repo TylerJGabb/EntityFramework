@@ -65,13 +65,33 @@
         <ScalarProperty Name="TagID" ColumnName="TagID" />
       </EndProperty>
     </AssociationSetMapping>
-    <EntitySetMapping Name="UserProfiles">
-      <EntityTypeMapping TypeName="PlutoModel.UserProfile">
-        <MappingFragment StoreEntitySet="UserProfiles">
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="UserProfileId" ColumnName="UserProfileId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteCourse" FunctionName="PlutoModel.Store.DeleteCourse" />
+    <FunctionImportMapping FunctionImportName="funcGetAuthorCourses" FunctionName="PlutoModel.Store.funcGetAuthorCourses">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PlutoModel.funcGetAuthorCourses_Result">
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="LevelString" ColumnName="LevelString" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCourses" FunctionName="PlutoModel.Store.GetCourses">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PlutoModel.GetCourses_Result">
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FullPrice" ColumnName="FullPrice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertCourse" FunctionName="PlutoModel.Store.InsertCourse" />
+    <FunctionImportMapping FunctionImportName="UpdateCourse" FunctionName="PlutoModel.Store.UpdateCourse" />
   </EntityContainerMapping>
 </Mapping>
