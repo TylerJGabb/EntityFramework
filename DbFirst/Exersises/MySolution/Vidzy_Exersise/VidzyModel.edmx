@@ -107,7 +107,7 @@
             <End Role="Genres" EntitySet="Genres" />
             <End Role="Videos" EntitySet="Videos" />
           </AssociationSet>
-          <FunctionImport Name="spAddVideo">
+          <FunctionImport Name="AddVideo">
             <Parameter Name="Name" Mode="In" Type="String" />
             <Parameter Name="ReleaseDate" Mode="In" Type="DateTime" />
             <Parameter Name="Genre" Mode="In" Type="String" />
@@ -144,7 +144,7 @@
               <ScalarProperty Name="Id" ColumnName="VideoId" />
             </EndProperty>
           </AssociationSetMapping>
-          <FunctionImportMapping FunctionImportName="spAddVideo" FunctionName="VidzyModel.Store.spAddVideo" />
+          <FunctionImportMapping FunctionImportName="AddVideo" FunctionName="VidzyModel.Store.spAddVideo" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
