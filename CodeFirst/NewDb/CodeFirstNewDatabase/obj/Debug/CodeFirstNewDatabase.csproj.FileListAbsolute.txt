@@ -1,0 +1,13 @@
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\bin\Debug\CodeFirstNewDatabase.exe.config
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\bin\Debug\CodeFirstNewDatabase.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\bin\Debug\CodeFirstNewDatabase.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\bin\Debug\EntityFramework.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\bin\Debug\EntityFramework.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.csprojResolveAssemblyReference.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.Migrations.InitialModel.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.csproj.GenerateResource.Cache
