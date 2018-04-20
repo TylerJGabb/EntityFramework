@@ -330,6 +330,11 @@
           <Property Type="Int16" Name="FullPrice" Nullable="false" />
           <Property Type="String" Name="Level" Nullable="false" MaxLength="50" />
         </ComplexType>
+        <EnumType Name="CourseLevel" UnderlyingType="Byte">
+          <Member Name="Beginner" Value="1" />
+          <Member Name="Intermediate" Value="2" />
+          <Member Name="Advanced" Value="3" />
+        </EnumType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
