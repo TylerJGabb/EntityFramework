@@ -10,6 +10,7 @@ namespace Vidzy_Exersise
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
