@@ -1,0 +1,11 @@
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\bin\Debug\Vidzy_Exersise.exe.config
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\bin\Debug\Vidzy_Exersise.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\bin\Debug\Vidzy_Exersise.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\bin\Debug\EntityFramework.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\bin\Debug\EntityFramework.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\obj\Debug\Vidzy_Exersise.csprojResolveAssemblyReference.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\obj\Debug\Vidzy_Exersise.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\obj\Debug\Vidzy_Exersise.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\DbFirst\Exersises\MySolution\Vidzy_Exersise\obj\Debug\Vidzy_Exersise.pdb
