@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeFirstNewDatabase.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,13 @@ namespace CodeFirstNewDatabase
     {
         static void Main(string[] args)
         {
+            using(var context = new PlutoDbContext())
+            {
+                var author = new Author()
+                {
+                    
+                };
+            }
         }
     }
 }

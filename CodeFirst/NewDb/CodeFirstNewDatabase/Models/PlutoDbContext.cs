@@ -15,7 +15,7 @@ namespace CodeFirstNewDatabase.Models
 
 
         public PlutoDbContext()
-        : base("name=DefaultConnection")
+        : base("name=Azure")
         {
             
         }

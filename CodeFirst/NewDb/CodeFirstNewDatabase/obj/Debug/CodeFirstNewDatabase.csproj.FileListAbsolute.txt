@@ -11,3 +11,4 @@ C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewData
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.pdb
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.Migrations.InitialModel.resources
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.csproj.GenerateResource.Cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\NewDb\CodeFirstNewDatabase\obj\Debug\CodeFirstNewDatabase.csproj.CopyComplete
