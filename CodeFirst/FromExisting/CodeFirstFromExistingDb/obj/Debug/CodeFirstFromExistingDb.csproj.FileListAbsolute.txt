@@ -1,0 +1,14 @@
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\bin\Debug\CodeFirstFromExistingDb.exe.config
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\bin\Debug\CodeFirstFromExistingDb.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\bin\Debug\CodeFirstFromExistingDb.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\bin\Debug\EntityFramework.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\bin\Debug\EntityFramework.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.csprojResolveAssemblyReference.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.csproj.CopyComplete
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.InitialModel.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.csproj.GenerateResource.cache
