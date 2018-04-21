@@ -12,3 +12,7 @@ C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirst
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.pdb
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.InitialModel.resources
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.csproj.GenerateResource.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.AddCategoriesTable.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.AddCategoryColumnToCoursesTable.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.AddDatePublishedColumnToCoursesTable.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.RenameCoursesTitleColumnToName.resources

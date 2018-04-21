@@ -5,9 +5,9 @@ namespace CodeFirstFromExistingDb
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class Model : DbContext
+    public partial class PlutoDbContext : DbContext
     {
-        public Model()
+        public PlutoDbContext()
             : base("name=PlutoDbContext")
         {
         }
@@ -15,6 +15,8 @@ namespace CodeFirstFromExistingDb
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
