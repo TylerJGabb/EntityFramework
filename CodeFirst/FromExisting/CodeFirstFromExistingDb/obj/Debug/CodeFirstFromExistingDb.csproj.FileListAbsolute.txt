@@ -16,3 +16,5 @@ C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirst
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.AddCategoryColumnToCoursesTable.resources
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.AddDatePublishedColumnToCoursesTable.resources
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.RenameCoursesTitleColumnToName.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.DeleteCategoryColumnFromCoursesTable.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting\CodeFirstFromExistingDb\obj\Debug\CodeFirstFromExistingDb.Migrations.DeleteCategoriesTable.resources

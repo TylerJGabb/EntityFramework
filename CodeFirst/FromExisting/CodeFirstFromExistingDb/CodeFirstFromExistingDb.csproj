@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
-    <Compile Include="Category.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Migrations\201804211727505_InitialModel.cs" />
     <Compile Include="Migrations\201804211727505_InitialModel.Designer.cs">
@@ -73,6 +72,14 @@
     <Compile Include="Migrations\201804211815582_RenameCoursesTitleColumnToName.cs" />
     <Compile Include="Migrations\201804211815582_RenameCoursesTitleColumnToName.Designer.cs">
       <DependentUpon>201804211815582_RenameCoursesTitleColumnToName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804221647490_DeleteCategoryColumnFromCoursesTable.cs" />
+    <Compile Include="Migrations\201804221647490_DeleteCategoryColumnFromCoursesTable.Designer.cs">
+      <DependentUpon>201804221647490_DeleteCategoryColumnFromCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804221649277_DeleteCategoriesTable.cs" />
+    <Compile Include="Migrations\201804221649277_DeleteCategoriesTable.Designer.cs">
+      <DependentUpon>201804221649277_DeleteCategoriesTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoDbContext.cs" />
@@ -99,6 +106,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804211815582_RenameCoursesTitleColumnToName.resx">
       <DependentUpon>201804211815582_RenameCoursesTitleColumnToName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804221647490_DeleteCategoryColumnFromCoursesTable.resx">
+      <DependentUpon>201804221647490_DeleteCategoryColumnFromCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804221649277_DeleteCategoriesTable.resx">
+      <DependentUpon>201804221649277_DeleteCategoriesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
