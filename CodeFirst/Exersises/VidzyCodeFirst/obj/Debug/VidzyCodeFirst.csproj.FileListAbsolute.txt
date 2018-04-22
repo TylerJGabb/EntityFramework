@@ -1,0 +1,17 @@
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\bin\Debug\VidzyCodeFirst.exe.config
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\bin\Debug\VidzyCodeFirst.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\bin\Debug\VidzyCodeFirst.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\bin\Debug\EntityFramework.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\bin\Debug\EntityFramework.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.csprojResolveAssemblyReference.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.csproj.CopyComplete
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.Migrations.InitialModel.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.csproj.GenerateResource.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.Migrations.SeedGenres.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.Migrations.ChangeVideoToHaveOneGenreOnly.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.Migrations.AddClassificationColumnToVideoTable.resources

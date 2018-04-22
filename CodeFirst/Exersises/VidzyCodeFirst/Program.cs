@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VidzyCodeFirst.Models;
 
 namespace VidzyCodeFirst
 {
@@ -10,6 +11,10 @@ namespace VidzyCodeFirst
     {
         static void Main(string[] args)
         {
+            using (var context = new VidzyDbContext())
+            {
+
+            }
         }
     }
 }
