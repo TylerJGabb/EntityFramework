@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Tyler\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_CodeFirstFromExistingDb.-1133314236.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\FromExisting" t="IncludeRecursive">
+      <e p="App.config" t="Include" />
+      <e p="Author.cs" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="CodeFirstFromExistingDb.csproj" t="IncludeRecursive" />
+      <e p="CodeFirstFromExistingDb.sln" t="IncludeFlat" />
+      <e p="Course.cs" t="Include" />
+      <e p="Migrations" t="Include">
+        <e p="201804211727505_InitialModel.cs" t="Include" />
+        <e p="201804211727505_InitialModel.Designer.cs" t="Include" />
+        <e p="201804211727505_InitialModel.resx" t="Include" />
+        <e p="201804211752363_AddCategoriesTable.cs" t="Include" />
+        <e p="201804211752363_AddCategoriesTable.Designer.cs" t="Include" />
+        <e p="201804211752363_AddCategoriesTable.resx" t="Include" />
+        <e p="201804211800286_AddCategoryColumnToCoursesTable.cs" t="Include" />
+        <e p="201804211800286_AddCategoryColumnToCoursesTable.Designer.cs" t="Include" />
+        <e p="201804211800286_AddCategoryColumnToCoursesTable.resx" t="Include" />
+        <e p="201804211811264_AddDatePublishedColumnToCoursesTable.cs" t="Include" />
+        <e p="201804211811264_AddDatePublishedColumnToCoursesTable.Designer.cs" t="Include" />
+        <e p="201804211811264_AddDatePublishedColumnToCoursesTable.resx" t="Include" />
+        <e p="201804211815582_RenameCoursesTitleColumnToName.cs" t="Include" />
+        <e p="201804211815582_RenameCoursesTitleColumnToName.Designer.cs" t="Include" />
+        <e p="201804211815582_RenameCoursesTitleColumnToName.resx" t="Include" />
+        <e p="201804221647490_DeleteCategoryColumnFromCoursesTable.cs" t="Include" />
+        <e p="201804221647490_DeleteCategoryColumnFromCoursesTable.Designer.cs" t="Include" />
+        <e p="201804221647490_DeleteCategoryColumnFromCoursesTable.resx" t="Include" />
+        <e p="201804221649277_DeleteCategoriesTable.cs" t="Include" />
+        <e p="201804221649277_DeleteCategoriesTable.Designer.cs" t="Include" />
+        <e p="201804221649277_DeleteCategoriesTable.resx" t="Include" />
+        <e p="Configuration.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
+      <e p="PlutoDbContext.cs" t="Include" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+      <e p="Tag.cs" t="Include" />
+    </e>
+  </component>
+</project>

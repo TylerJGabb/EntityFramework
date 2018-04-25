@@ -1,0 +1,14 @@
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\bin\Debug\FluentApi.exe.config
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\bin\Debug\FluentApi.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\bin\Debug\FluentApi.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\bin\Debug\EntityFramework.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\bin\Debug\EntityFramework.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.csprojResolveAssemblyReference.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.csproj.CopyComplete
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.exe
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.pdb
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.Migrations.InitialModel.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.csproj.GenerateResource.cache
