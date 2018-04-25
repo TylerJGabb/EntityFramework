@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 
 namespace VidzyCodeFirst.Models
 {
-    class Video
+    public class Video
     {
+        public Video()
+        {
+            Tags = new List<Tag>();
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime ReleaseDate { get; set; }
         public Genre Genre { get; set; }
+        public int GenreId { get; set; }
         public Classification Classification { get; set; }
+        public IList<Tag> Tags { get; set; }
     }
 }
 

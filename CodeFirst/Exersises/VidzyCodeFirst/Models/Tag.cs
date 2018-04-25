@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace VidzyCodeFirst.Models
 {
-    public class Genre
+    public class Tag
     {
-        public Genre()
+        public Tag()
         {
             Videos = new List<Video>();
         }

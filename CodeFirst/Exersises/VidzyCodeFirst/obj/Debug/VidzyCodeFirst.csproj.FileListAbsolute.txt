@@ -15,3 +15,5 @@ C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFir
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.Migrations.SeedGenres.resources
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.Migrations.ChangeVideoToHaveOneGenreOnly.resources
 C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.Migrations.AddClassificationColumnToVideoTable.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.Migrations.Iteration4.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\CodeFirst\Exersises\VidzyCodeFirst\obj\Debug\VidzyCodeFirst.Migrations.Iteration5.resources

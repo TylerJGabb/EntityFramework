@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityConfigs\VideoConfig.cs" />
     <Compile Include="Migrations\201804221759286_InitialModel.cs" />
     <Compile Include="Migrations\201804221759286_InitialModel.Designer.cs">
       <DependentUpon>201804221759286_InitialModel.cs</DependentUpon>
@@ -65,9 +66,18 @@
     <Compile Include="Migrations\201804221820519_AddClassificationColumnToVideoTable.Designer.cs">
       <DependentUpon>201804221820519_AddClassificationColumnToVideoTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804250506555_Iteration4.cs" />
+    <Compile Include="Migrations\201804250506555_Iteration4.Designer.cs">
+      <DependentUpon>201804250506555_Iteration4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804250517094_Iteration5.cs" />
+    <Compile Include="Migrations\201804250517094_Iteration5.Designer.cs">
+      <DependentUpon>201804250517094_Iteration5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classification.cs" />
     <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\Video.cs" />
     <Compile Include="Models\VidzyDbContext.cs" />
     <Compile Include="Program.cs" />
@@ -89,6 +99,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804221820519_AddClassificationColumnToVideoTable.resx">
       <DependentUpon>201804221820519_AddClassificationColumnToVideoTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804250506555_Iteration4.resx">
+      <DependentUpon>201804250506555_Iteration4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804250517094_Iteration5.resx">
+      <DependentUpon>201804250517094_Iteration5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
