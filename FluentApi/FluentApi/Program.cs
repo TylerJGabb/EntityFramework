@@ -12,7 +12,8 @@ namespace FluentApi
         {
             using (var ctx = new PlutoDbContext())
             {
-
+                var course = ctx.Courses.First().Level = CourseLevel.Intermediate;
+                ctx.SaveChanges();
             }
         }
     }

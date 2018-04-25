@@ -12,3 +12,5 @@ C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\Fl
 C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.pdb
 C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.Migrations.InitialModel.resources
 C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.csproj.GenerateResource.cache
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.Migrations.SetCourseLevelToEnum.resources
+C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi\FluentApi\obj\Debug\FluentApi.Migrations.ChangedNameOfCourseTags.resources

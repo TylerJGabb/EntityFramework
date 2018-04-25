@@ -17,7 +17,7 @@ namespace FluentApi
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public int Level { get; set; }
+        public CourseLevel Level { get; set; }
         public float FullPrice { get; set; }
         public Author Author { get; set; }
         public Cover Cover { get; set; }

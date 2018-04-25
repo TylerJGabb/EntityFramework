@@ -51,10 +51,21 @@
   <ItemGroup>
     <Compile Include="Author.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="CourseLevel.cs" />
     <Compile Include="Cover.cs" />
+    <Compile Include="EntityConfigurations\CourseConfiguration.cs" />
+    <Compile Include="EntityConfigurations\CoverConfiguration.cs" />
     <Compile Include="Migrations\201804250400278_InitialModel.cs" />
     <Compile Include="Migrations\201804250400278_InitialModel.Designer.cs">
       <DependentUpon>201804250400278_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804250437160_SetCourseLevelToEnum.cs" />
+    <Compile Include="Migrations\201804250437160_SetCourseLevelToEnum.Designer.cs">
+      <DependentUpon>201804250437160_SetCourseLevelToEnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804250441537_ChangedNameOfCourseTags.cs" />
+    <Compile Include="Migrations\201804250441537_ChangedNameOfCourseTags.Designer.cs">
+      <DependentUpon>201804250441537_ChangedNameOfCourseTags.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoDbContext.cs" />
@@ -69,6 +80,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804250400278_InitialModel.resx">
       <DependentUpon>201804250400278_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804250437160_SetCourseLevelToEnum.resx">
+      <DependentUpon>201804250437160_SetCourseLevelToEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804250441537_ChangedNameOfCourseTags.resx">
+      <DependentUpon>201804250441537_ChangedNameOfCourseTags.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
