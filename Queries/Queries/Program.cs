@@ -12,16 +12,13 @@ namespace Queries
             using (var ctx = new PlutoContext())
             {
                 //Get all courses in level 1, order by name descending then description descending
-                var courses =
-                    ctx.Courses
-                        .Where(c => c.Level == 1)
-                        .OrderByDescending(c => c.Name)
-                        .ThenByDescending(c => c.Description)
-                        .Select(c => new
-                        {
-                            Name = c.Name,
-                            Description = c.Description
-                        });
+                var courses = ctx.Courses;
+                int end = courses.Count();
+
+                for (int i = 0; i < end; i++)
+                {
+                    Console.WriteLine(courses.OrderBy(c => c.Id).Skip(i).Take(1).First());
+                }
 
             }
         }
