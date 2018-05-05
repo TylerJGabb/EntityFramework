@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Tyler\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_FluentApi.-1495981358.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Tyler\Documents\Clones\EntityFramework\FluentApi" t="IncludeFlat">
+      <e p="FluentApi" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="Author.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Course.cs" t="Include" />
+        <e p="CourseLevel.cs" t="Include" />
+        <e p="Cover.cs" t="Include" />
+        <e p="EntityConfigurations" t="Include">
+          <e p="CourseConfiguration.cs" t="Include" />
+          <e p="CoverConfiguration.cs" t="Include" />
+        </e>
+        <e p="FluentApi.csproj" t="IncludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="201804250400278_InitialModel.cs" t="Include" />
+          <e p="201804250400278_InitialModel.Designer.cs" t="Include" />
+          <e p="201804250400278_InitialModel.resx" t="Include" />
+          <e p="201804250437160_SetCourseLevelToEnum.cs" t="Include" />
+          <e p="201804250437160_SetCourseLevelToEnum.Designer.cs" t="Include" />
+          <e p="201804250437160_SetCourseLevelToEnum.resx" t="Include" />
+          <e p="201804250441537_ChangedNameOfCourseTags.cs" t="Include" />
+          <e p="201804250441537_ChangedNameOfCourseTags.Designer.cs" t="Include" />
+          <e p="201804250441537_ChangedNameOfCourseTags.resx" t="Include" />
+          <e p="Configuration.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PlutoDbContext.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Tag.cs" t="Include" />
+      </e>
+      <e p="FluentApi.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
