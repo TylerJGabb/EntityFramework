@@ -10,6 +10,7 @@ namespace FluentApi.EntityConfigurations
     public class CourseConfiguration : EntityTypeConfiguration<Course>
     {
 
+        //Everything in this constructor is applied directly to the Course entity.
         public CourseConfiguration()
         {
 
@@ -36,13 +37,14 @@ namespace FluentApi.EntityConfigurations
                 .Map(m =>
                 {
                     m.ToTable("CourseTags");
-                    m.MapLeftKey("CourseId");
-                    m.MapRightKey("TagId");
+                    m.MapLeftKey("CourseId"); //Left key is the course since this is a configuration for the Course class
+                    m.MapRightKey("TagId"); //Right key is the Tag, the item we are trying to create a M2M relationship for
                 });
 
             //One To One
-            HasRequired(c => c.Cover)
-            .WithRequiredPrincipal(cov => cov.Course);
+            HasRequired(c => c.Cover) 
+            .WithRequiredPrincipal(cov => cov.Course); //Principal is the Parent
+            //Dependent is the child
         }
     }
 }
