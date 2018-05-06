@@ -21,6 +21,7 @@ namespace FluentApi
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
             modelBuilder.Configurations.Add(new CourseConfiguration());
             modelBuilder.Configurations.Add(new CoverConfiguration());
         }

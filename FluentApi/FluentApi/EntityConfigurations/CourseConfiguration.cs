@@ -37,8 +37,10 @@ namespace FluentApi.EntityConfigurations
                 .Map(m =>
                 {
                     m.ToTable("CourseTags");
-                    m.MapLeftKey("CourseId"); //Left key is the course since this is a configuration for the Course class
-                    m.MapRightKey("TagId"); //Right key is the Tag, the item we are trying to create a M2M relationship for
+                    //Left key is the course since this is a configuration for the Course class
+                    m.MapLeftKey("CourseId"); 
+                    //Right key is the Tag, the item we are trying to create a M2M relationship for
+                    m.MapRightKey("TagId"); 
                 });
 
             //One To One
