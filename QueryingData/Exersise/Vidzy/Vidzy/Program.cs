@@ -11,6 +11,18 @@ namespace Vidzy
         {
             using (var ctx = new VidzyContext())
             {
+                var x = ctx.Videos.ToList();
+                foreach(var vid in x)
+                {
+                    Console.WriteLine(vid.Name);
+                }
+            }
+
+            return;
+
+
+            using (var ctx = new VidzyContext())
+            {
                 var genres = ctx.Genres.ToList();
 
                 Console.WriteLine("===========Action movies sorted by name");

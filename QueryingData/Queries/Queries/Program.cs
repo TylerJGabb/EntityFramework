@@ -5,22 +5,22 @@ using System.Linq;
 
 namespace Queries
 {
+    using System.Data.Entity;
     class Program
     {
         static void Main(string[] args)
         {
             using (var ctx = new PlutoContext())
             {
-                //Get all courses in level 1, order by name descending then description descending
-                var courses = ctx.Courses;
-                int end = courses.Count();
+                var authors = ctx.Authors.ToList();
+                var authorIds = authors.Select(a => a.Id);
 
-                for (int i = 0; i < end; i++)
-                {
-                    Console.WriteLine(courses.OrderBy(c => c.Id).Skip(i).Take(1).First());
-                }
-
+                //load all of the courses whose authors are contained in the list of authors we brought back
+                //and which are also free. 
+                ctx.Courses.Where(c => authorIds.Contains(c.AuthorId) && c.FullPrice == 0).Load();
             }
+
+
         }
     }
 }
